@@ -13,7 +13,7 @@ The structure of this repository is consist of folders/ directories of class ass
 #### Assignement Projects
 
 - Assignment 1 - Resume
-- Assignment 2 - **`to be assigned`**
+- Assignment 2 - **`TO BE ASSIGNED`**
 
 ## License
 
