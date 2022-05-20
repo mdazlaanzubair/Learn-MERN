@@ -1,4 +1,4 @@
-<img src="https://miro.medium.com/max/1400/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg" width="500" height="250" title="Hero Image" alt="Hero Image" />
+<img src="https://miro.medium.com/max/1400/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg" title="Hero Image" alt="Hero Image" />
 
 #### Introduction
 
