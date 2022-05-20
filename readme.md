@@ -1,4 +1,4 @@
-[![Hero Image](https://miro.medium.com/max/1400/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg "Hero Image")](# "Hero Image")
+<img src="https://miro.medium.com/max/1400/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg" height="250" title="Hero Image" alt="Hero Image" />
 
 #### Introduction
 
@@ -21,13 +21,13 @@ The structure of this repository is consist of folders/ directories of class ass
 
 2. Above the list of files, click **Code**.
 
-[![CLONE_OR_DOWNLOAD_BUTTON](https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png "CLONE_OR_DOWNLOAD_BUTTON")](# "CLONE_OR_DOWNLOAD_BUTTON")
+<img src="https://docs.github.com/assets/cb-20363/images/help/repository/code-button.png" height="250" title="CLONE_OR_DOWNLOAD_BUTTON" alt="CLONE_OR_DOWNLOAD_BUTTON" />
 
 3. Copy the URL for the repository.
 
 - To clone the repository using HTTPS, under "HTTPS", Copy the URL.
 
-[![COPY_URL](https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png "COPY_URL")](# "COPY_URL")
+<img src="https://docs.github.com/assets/cb-33207/images/help/repository/https-url-clone-cli.png" height="250" title="COPY_URL" alt="COPY-URL" />
 
 4. Open Git Bash or terminal.
 
