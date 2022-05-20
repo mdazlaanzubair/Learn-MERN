@@ -35,7 +35,9 @@ The structure of this repository is consist of folders/ directories of class ass
 
 6. Type git clone, and then paste the URL you copied earlier.
 
-`git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY`
+```git_bash
+git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+```
 
 7. Press Enter to create your local clone.
 ```
