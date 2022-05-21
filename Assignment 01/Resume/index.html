@@ -6,15 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Resume - Muhammad Azlaan Zubair</title>
 
+    <!-- importing font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
     <!-- importing library -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.11.2/css/all.css"
     />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-    />
+
     <link
       rel="stylesheet"
       href="node_modules/mdbootstrap/css/bootstrap.min.css"
@@ -29,15 +34,18 @@
   <body>
     <!-- main container -->
     <div class="container my-5 py-5">
-      <div class="row justify-content-between">
+      <div class="row justify-content-center">
         <div class="col-md-3 my-5">
-          <div class="card card_profile shadow-lg">
+          <div class="card card_profile shadow-lg border-radius-50 border-0">
             <img
               src="https://images.unsplash.com/photo-1570295999919-56ceb5ecca61?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
-              class="card-img-top profile_img"
+              class="card-img-top profile_img border-radius-50 border-0"
               alt="Fissure in Sandstone"
             />
-            <div class="card-body card_profile_body text-center">
+            <div
+              class="card-body card_profile_body text-center"
+              style="height: 100px"
+            >
               <h4 class="card-title text-center text-dark">
                 <span>Muhammad</span> <strong>Azlaan</strong>
               </h4>
@@ -48,9 +56,8 @@
 
               <!-- social links -->
               <div class="social_links">
-                <strong class="m-3">I'm social! </strong>
                 <a
-                  class="m-2 small"
+                  class="m-2 text-dark"
                   href="#!"
                   data-mdb-toggle="tooltip"
                   title="Facebook!"
@@ -59,7 +66,7 @@
                   <i class="fab fa-facebook-f fa-lg"></i>
                 </a>
                 <a
-                  class="m-2 small"
+                  class="m-2 text-dark"
                   href="#!"
                   data-mdb-toggle="tooltip"
                   title="Instagram!"
@@ -68,7 +75,7 @@
                   <i class="fab fa-instagram fa-lg"></i>
                 </a>
                 <a
-                  class="m-2 small"
+                  class="m-2 text-dark"
                   href="#!"
                   data-mdb-toggle="tooltip"
                   title="Github!"
@@ -77,37 +84,46 @@
                   <i class="fab fa-github fa-lg"></i>
                 </a>
               </div>
-
-              <!-- short intro -->
-              <p class="card-text card_profile_intro">
-                I'm a full-stack developer dedicated to my work and have the
-                skills and knowledge necessary to make any project a success.
-                <br />
-                I enjoy every step of the development process, from discussion
-                and collaboration to concept execution.
-              </p>
             </div>
-            <div class="card-footer card_profile_footer p-0">
-              <h5 class="m-3">Bios</h5>
-              <ul class="list-group list-group-small m-0">
-                <li class="list-group-item border-0">
-                  <i class="far fa-calendar-alt mr-2"></i> July 25<sup>th</sup>,
-                  1996
+            <div
+              class="card-footer card_profile_footer p-0 bg-secondary border-0 text-center border-radius-bottom-50 pb-3"
+            >
+              <h5 class="ml-3 mt-3 text-left font-weight-bolder">Bios</h5>
+              <ul class="list-group list-group-small m-0 pt-2 text-left">
+                <li class="list-group-item border-0 bg-secondary m-0 pt-0">
+                  <small>
+                    <i class="far fa-calendar-alt mr-2"></i> July
+                    25<sup>th</sup>, 1996
+                  </small>
                 </li>
-                <li class="list-group-item border-0">
-                  <i class="far fa-calendar-alt mr-2"></i> July 25<sup>th</sup>,
-                  1996
+                <li class="list-group-item border-0 bg-secondary m-0 pt-0">
+                  <small>
+                    <i class="fas fa-map-marker-alt mr-2"></i> Karachi, Pakistan
+                  </small>
                 </li>
-                <li class="list-group-item border-0">
-                  <i class="far fa-calendar-alt mr-2"></i> July 25<sup>th</sup>,
-                  1996
+                <li class="list-group-item border-0 bg-secondary m-0 pt-0">
+                  <small>
+                    <i class="far fa-envelope mr-2"></i>
+                    <a href="mailto:azlaanzubair4@gmail.com"
+                      >azlaanzubair4@gmail.com</a
+                    >
+                  </small>
+                </li>
+                <li class="list-group-item border-0 bg-secondary m-0 pt-0">
+                  <small>
+                    <i class="fas fa-mobile-alt mr-2"></i>
+                    (+92) 311 3046692
+                  </small>
                 </li>
               </ul>
+              <button type="button" class="btn btn-primary mb-3">
+                Download CV
+              </button>
             </div>
           </div>
         </div>
-        <div class="col-md-9 my-5">
-          <div class="card card_main shadow-lg">
+        <div class="col-md-8 my-5">
+          <div class="card card_main shadow-lg border-radius-50 border-0">
             <div class="card-body">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
