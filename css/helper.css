@@ -1,0 +1,45 @@
+/* 
+============
+Color Scheme 
+============
+Accent: #304CFD
+Primary: #FFFFFF
+Secondary: #F5F8F9
+Dark: #46586E 
+*/
+
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(70, 88, 110, 0.1) !important;
+}
+
+.text-accent {
+    color: #304CFD !important;
+}
+
+.text-white {
+    color: #ffffff !important;
+}
+
+.text-secondary {
+    color: #F5F8F9 !important;
+}
+
+.text-dark {
+    color: #46586E !important;
+}
+
+.bg-accent {
+    background-color: #304CFD !important;
+}
+
+.bg-white {
+    background-color: #ffffff !important;
+}
+
+.bg-secondary {
+    background-color: #F5F8F9 !important;
+}
+
+.bg-dark {
+    background-color: #46586E !important;
+}
