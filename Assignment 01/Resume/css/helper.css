@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
 
 body {
-  font-family: 'Poppins', sans-serif !important;
+  font-family: "Poppins", sans-serif !important;
 }
 
 .para {
@@ -15,5 +15,33 @@ body {
 }
 
 .bg-light {
-  background-color: #F5F6F7 !important;
+  background-color: #f5f6f7 !important;
+}
+
+.bg-accent {
+  background-color: #304cfd !important;
+}
+
+.bg-dark {
+  background-color: #44566c !important;
+}
+
+bg-white {
+  background-color: #ffffff !important;
+}
+
+.text-light {
+  color: #f5f6f7 !important;
+}
+
+.text-accent {
+  color: #304cfd !important;
+}
+
+.text-dark {
+  color: #44566c !important;
+}
+
+.text-white {
+  color: #ffffff !important;
 }
