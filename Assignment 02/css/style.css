@@ -1,0 +1,44 @@
+body {
+  font-family: poppins !important;
+  color: #272626;
+}
+
+.bg-accent {
+  background-color: #c326ae !important;
+}
+
+.bg-dark {
+  background-color: #272626 !important;
+}
+
+.bg-light {
+  background-color: #f3f2fc !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bg-grad {
+  background: linear-gradient(
+    45deg,
+    rgba(195, 38, 174, 1),
+    rgba(91, 14, 214, 1) 100%
+  );
+}
+
+.text-accent {
+  color: #c326ae !important;
+}
+
+.text-dark {
+  color: #272626 !important;
+}
+
+.text-light {
+  color: #f3f2fc !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
