@@ -10,7 +10,7 @@ There is this certification called **SysBorg Certified Web Developer**, powered 
 
 The structure of this repository is consist of folders/ directories of class assignement/ course projects. Assignments throughout the course are listed below.
 
-#### Assignement Projects
+#### Assignment Projects
 
 - [**Assignment 1 - Resume**](https://github.com/azlaan4/Learn-MERN/tree/master/Assignment%2001/Resume/ "**Assignment 1 - Resume**")
 - [**Assignment 2 - Multi-page Website**](https://github.com/azlaan4/Learn-MERN/tree/master/Assignment%2002 "**Assignment 2 - Multi-page Website**")
