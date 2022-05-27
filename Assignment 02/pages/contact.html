@@ -10,7 +10,7 @@
       href="./assets/imgs/logo/Logo - Icon.png"
       type="image/x-icon"
     />
-    <title>E-Commerce | Contact</title>
+    <title>E-Commerce | Contact Us</title>
 
     <!-- importing library -->
     <!-- Font Awesome -->
@@ -28,10 +28,12 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.css"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
       <!-- Container wrapper -->
       <div class="container">
         <!-- Toggle button -->
@@ -62,19 +64,22 @@
           <!-- Right links -->
           <ul class="navbar-nav py-2 ms-auto">
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="#">Men's</a>
+              <a class="nav-link fw-bold" href="../index.html#home">Home</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="#">Women's</a>
+              <a class="nav-link fw-bold" href="../index.html#men">Men's</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="#">Kid's</a>
+              <a class="nav-link fw-bold" href="../index.html#women">Women's</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="/pages/about.html">About Us</a>
+              <a class="nav-link fw-bold" href="../index.html#kids">Kid's</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="/pages/contact.html">Contact</a>
+              <a class="nav-link fw-bold" href="./about.html">About Us</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-bold" href="./contact.html">Contact</a>
             </li>
           </ul>
           <!-- Right links -->
@@ -84,6 +89,298 @@
       <!-- Container wrapper -->
     </nav>
     <!-- Navbar -->
+
+    <!-- Jumbotron -->
+    <div class="container-fluid px-0" style="margin-top: 4%">
+      <div class="row justify-content-center">
+        <div class="col my-3">
+          <div
+            class="p-5 text-center bg-image"
+            style="
+              background-image: url('https://images.unsplash.com/photo-1483985988355-763728e1935b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170');
+              height: 500px;
+              background-repeat: no-repeat;
+              background-size: cover;
+            "
+          >
+            <div
+              class="mask"
+              style="
+                background: linear-gradient(
+                  45deg,
+                  rgba(77, 21, 69, 0.6),
+                  rgba(45, 9, 104, 0.6) 50%
+                );
+              "
+            >
+              <div
+                class="d-flex justify-content-center align-items-center h-100"
+              >
+                <div class="text-white">
+                  <h1 class="mb-3 text-left">Contact Us</h1>
+                  <h6 class="mb-3 text-left">
+                    We are always here to help you. Thanks for reaching out!
+                  </h6>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron -->
+
+    <!-- about section -->
+    <div class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <figure class="figure">
+            <img
+              src="https://images.unsplash.com/photo-1524661135-423995f22d0b?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1174"
+              class="figure-img img-fluid shadow-0 mb-3"
+              alt="Taking up Water with a Spoon"
+            />
+          </figure>
+        </div>
+        <div class="col-md-5">
+          <div class="card shadow-0">
+            <div class="card-body p-5">
+              <h3 class="card-title fw-bold">Say Hello. Don't Be Shy!</h3>
+              <p class="card-text text-muted small">
+                Some quick example text to build on the card title and make up
+                the bulk of the card's content.
+              </p>
+              <form>
+                <!-- 2 column grid layout with text inputs for the first and last names -->
+                <div class="row mb-4">
+                  <div class="col">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="form3Example1"
+                        class="form-control"
+                      />
+                      <label class="form-label" for="form3Example1"
+                        >First name</label
+                      >
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-outline">
+                      <input
+                        type="text"
+                        id="form3Example2"
+                        class="form-control"
+                      />
+                      <label class="form-label" for="form3Example2"
+                        >Last name</label
+                      >
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="email" id="form3Example3" class="form-control" />
+                  <label class="form-label" for="form3Example3"
+                    >Email address</label
+                  >
+                </div>
+
+                <!-- Message box input -->
+                <div class="form-outline">
+                  <textarea
+                    class="form-control"
+                    id="textAreaExample"
+                    rows="4"
+                  ></textarea>
+                  <label class="form-label" for="textAreaExample"
+                    >Message</label
+                  >
+                </div>
+
+                <!-- Checkbox -->
+                <div class="form-check d-flex justify-content-start mb-4 mt-4 ms-1">
+                  <input
+                    class="form-check-input me-2"
+                    type="checkbox"
+                    value=""
+                    id="form2Example33"
+                    checked
+                  />
+                  <label class="form-check-label" for="form2Example33">
+                    Subscribe to our newsletter
+                  </label>
+                </div>
+
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block mb-4">
+                  Send
+                </button>
+
+                <!-- Register buttons -->
+                <div class="text-center">
+                  <p>We are social:</p>
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-google"></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </button>
+
+                  <button
+                    type="button"
+                    class="btn btn-primary btn-floating mx-1"
+                  >
+                    <i class="fab fa-github"></i>
+                  </button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- about section -->
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-light text-muted">
+      <!-- Section: Social media -->
+      <section
+        class="d-flex justify-content-start justify-content-lg-start p-4 border-bottom"
+      >
+        <!-- Left -->
+        <div class="d-none d-lg-block m-1">
+          <strong>Get socially connected:</strong>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div class="m-1">
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <!-- Right -->
+      </section>
+      <!-- Section: Social media -->
+
+      <!-- Section: Links  -->
+      <section class="">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <img
+                  src="../assets/imgs/logo/Logo - Icon.png"
+                  width="50"
+                  height="50"
+                  alt="logo"
+                  srcset=""
+                />
+                Ecommerce Webstore
+              </h6>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. At nam
+                inventore molestiae ut beatae.
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Products</h6>
+              <p>
+                <a href="../index.html#men" class="text-reset">Men's</a>
+              </p>
+              <p>
+                <a href="../index.html#women" class="text-reset">Women's</a>
+              </p>
+              <p>
+                <a href="../index.html#kids" class="text-reset">Kid's</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
+              <p>
+                <a href="../index.html#home" class="text-reset">Home</a>
+              </p>
+              <p>
+                <a href="./about.html" class="text-reset">About Us</a>
+              </p>
+              <p>
+                <a href="./contact.html" class="text-reset">Contact</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+              <p><i class="fas fa-home me-3"></i> Karachi, Sindh, Pakistan</p>
+              <p>
+                <i class="fas fa-envelope me-3"></i>
+                ecommerce@webstore.com
+              </p>
+              <p><i class="fas fa-phone me-3"></i> (+92) 21 234 5678</p>
+              <p><i class="fas fa-print me-3"></i> (+92) 21 234 5678</p>
+            </div>
+            <!-- Grid column -->
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        All Rights Reserved &copy; 2021-22 -
+        <a class="text-reset fw-bold" href="#!">Ecommerce Webstore.com</a>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
 
     <!-- importing scripts -->
     <!-- MDB -->

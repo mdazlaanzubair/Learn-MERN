@@ -31,9 +31,12 @@
 
     <link rel="stylesheet" href="/css/style.css" />
   </head>
-  <body>
+  <body data-mdb-spy="scroll" data-mdb-target="#navbar" data-mdb-offset="-50">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top">
+    <nav
+      id="navbar"
+      class="navbar navbar-expand-lg navbar-light bg-white fixed-top"
+    >
       <!-- Container wrapper -->
       <div class="container">
         <!-- Toggle button -->
@@ -64,13 +67,16 @@
           <!-- Right links -->
           <ul class="navbar-nav py-2 ms-auto">
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="#">Men's</a>
+              <a class="nav-link fw-bold" href="#home">Home</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="#">Women's</a>
+              <a class="nav-link fw-bold" href="#men">Men's</a>
             </li>
             <li class="nav-item mx-2">
-              <a class="nav-link fw-bold" href="#">Kid's</a>
+              <a class="nav-link fw-bold" href="#women">Women's</a>
+            </li>
+            <li class="nav-item mx-2">
+              <a class="nav-link fw-bold" href="#kids">Kid's</a>
             </li>
             <li class="nav-item mx-2">
               <a class="nav-link fw-bold" href="/pages/about.html">About Us</a>
@@ -88,7 +94,7 @@
     <!-- Navbar -->
 
     <!-- Jumbotron -->
-    <div class="container-fluid" style="margin-top: 6%">
+    <div id="home" class="container-fluid" style="margin-top: 6%">
       <div class="row justify-content-center">
         <div class="col-md-6 my-3">
           <div
@@ -326,7 +332,7 @@
     <!-- Jumbotron -->
 
     <!-- Men Product Section -->
-    <div class="container my-5">
+    <div id="men" class="container my-5">
       <div class="row justify-content-center">
         <div class="section_header my-5">
           <h1 class="">Men's Latest</h1>
@@ -335,7 +341,7 @@
             the other themes.
           </p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1608494603682-913a9e8abee9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=854"
@@ -362,7 +368,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1617952236317-0bd127407984?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -389,7 +395,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -416,7 +422,115 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1630724725268-8272ac390de7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=842"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Casual
+                <strong class="h5 float-end">$ 150</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1608494603682-913a9e8abee9?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=854"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Classic Winter
+                <strong class="h5 float-end">$ 120</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1617952236317-0bd127407984?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Spring Collection
+                <strong class="h5 float-end">$ 50</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1593032465175-481ac7f401a0?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Spring Collection
+                <strong class="h5 float-end">$ 1500</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1630724725268-8272ac390de7?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=842"
@@ -448,7 +562,7 @@
     <!-- Men Product Section -->
 
     <!-- Women Product Section -->
-    <div class="container my-5">
+    <div id="women" class="container my-5">
       <div class="row justify-content-center">
         <div class="section_header my-5">
           <h1 class="">Women's Latest</h1>
@@ -457,7 +571,7 @@
             the other themes.
           </p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1588189408846-30ad110a0f4c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=905"
@@ -484,7 +598,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1645318801217-143533cb559f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -511,7 +625,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1597983073453-ef06cfc2240e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -538,7 +652,115 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1499887142886-791eca5918cd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Dayout
+                <strong class="h5 float-end">$ 150</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1588189408846-30ad110a0f4c?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=905"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Fresh Collection
+                <strong class="h5 float-end">$ 120</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1645318801217-143533cb559f?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Gym Wear
+                <strong class="h5 float-end">$ 50</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1597983073453-ef06cfc2240e?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Traditional
+                <strong class="h5 float-end">$ 1500</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1499887142886-791eca5918cd?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -570,7 +792,7 @@
     <!-- Women Product Section -->
 
     <!-- Kids Product Section -->
-    <div class="container my-5">
+    <div id="kids" class="container my-5">
       <div class="row justify-content-center">
         <div class="section_header my-5">
           <h1 class="">Kid's Latest</h1>
@@ -579,7 +801,7 @@
             the other themes.
           </p>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -606,7 +828,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1578826990881-251096d87e59?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -633,7 +855,7 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1497340525489-441e8427c980?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
@@ -660,7 +882,115 @@
             </div>
           </div>
         </div>
-        <div class="col-md-3">
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1448301566816-a036b4240d58?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Casual
+                <strong class="h5 float-end">$ 150</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1503944583220-79d8926ad5e2?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Party Wear
+                <strong class="h5 float-end">$ 120</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1578826990881-251096d87e59?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Classic Spring
+                <strong class="h5 float-end">$ 50</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
+          <div class="card">
+            <img
+              src="https://images.unsplash.com/photo-1497340525489-441e8427c980?crop=entropy&cs=tinysrgb&fm=jpg&ixlib=rb-1.2.1&q=80&raw_url=true&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880"
+              class="card-img-top"
+              alt="product image"
+              width="100%"
+              height="300px"
+            />
+            <div class="card-body">
+              <h5 class="card-title mb-0">
+                Dayout
+                <strong class="h5 float-end">$ 1500</strong>
+              </h5>
+              <p class="card-text">
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star"></i>
+                <i class="fa-xs fas fa-star-half-alt"></i>
+              </p>
+              <a href="#!" class="btn btn-block btn-primary bg-grad btn-lg"
+                >Buy Now</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 my-3">
           <div class="card">
             <img
               src="https://images.unsplash.com/photo-1448301566816-a036b4240d58?ixlib=rb-1.2.1&raw_url=true&q=80&fm=jpg&crop=entropy&cs=tinysrgb&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170"
@@ -705,22 +1035,22 @@
 
         <!-- Right -->
         <div class="m-1">
-          <a href="" class="me-4 text-reset">
+          <a href="#" class="me-4 text-reset">
             <i class="fab fa-facebook-f"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="#" class="me-4 text-reset">
             <i class="fab fa-twitter"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="#" class="me-4 text-reset">
             <i class="fab fa-google"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="#" class="me-4 text-reset">
             <i class="fab fa-instagram"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="#" class="me-4 text-reset">
             <i class="fab fa-linkedin"></i>
           </a>
-          <a href="" class="me-4 text-reset">
+          <a href="#" class="me-4 text-reset">
             <i class="fab fa-github"></i>
           </a>
         </div>
@@ -734,14 +1064,14 @@
           <!-- Grid row -->
           <div class="row mt-3">
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <div class="col-md-3 my-3 col-lg-4 col-xl-3 mx-auto mb-4">
               <!-- Content -->
               <h6 class="text-uppercase fw-bold mb-4">
                 <img
                   src="./assets/imgs/logo/Logo - Icon.png"
                   width="50"
                   height="50"
-                  alt=""
+                  alt="logo"
                   srcset=""
                 />
                 Ecommerce Webstore
@@ -758,26 +1088,26 @@
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Products</h6>
               <p>
-                <a href="#!" class="text-reset">Men's</a>
+                <a href="#men" class="text-reset">Men's</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Women's</a>
+                <a href="#women" class="text-reset">Women's</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Kid's</a>
+                <a href="#kids" class="text-reset">Kid's</a>
               </p>
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <div class="col-md-3 my-3 col-lg-2 col-xl-2 mx-auto mb-4">
               <!-- Links -->
               <h6 class="text-uppercase fw-bold mb-4">Useful links</h6>
               <p>
-                <a href="#!" class="text-reset">About Us</a>
+                <a href="./pages/about.html" class="text-reset">About Us</a>
               </p>
               <p>
-                <a href="#!" class="text-reset">Contact</a>
+                <a href="./pages/contact.html" class="text-reset">Contact</a>
               </p>
             </div>
             <!-- Grid column -->
@@ -815,11 +1145,23 @@
     </footer>
     <!-- Footer -->
 
+    <!-- Back to top button -->
+    <button
+      type="button"
+      class="btn btn-danger btn-floating btn-lg bg-grad"
+      id="btn-back-to-top"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <!-- Back to top button -->
+
     <!-- importing scripts -->
     <!-- MDB -->
     <script
       type="text/javascript"
       src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/4.1.0/mdb.min.js"
     ></script>
+
+    <script src="./js/script.js"></script>
   </body>
 </html>
