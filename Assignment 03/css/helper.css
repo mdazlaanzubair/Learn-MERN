@@ -56,9 +56,8 @@
   background-color: #44566c !important;
 }
 
-.btn-primary {
+/* .btn-primary {
   background: #0a31a6 !important;
-  /* border-radius: 20px !important; */
   transition: 0.3s ease-in-out;
 }
 
@@ -70,4 +69,4 @@
 .btn-primary:active {
   background: #0a31a6 !important;
   transform: translateY(2px);
-}
+} */
