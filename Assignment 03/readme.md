@@ -2,9 +2,9 @@
 
 ### Preamble
 
-Assignment is to develop an interactive and attractive website. Simply, an interactive website is a website that communicates and allows for interaction with users. Interaction doesn't just mean allowing users to “click” and “scroll”. Infact, interactive websites offers content to their users that is amusing and engaging too. [Specbee, August 21, 2019](https://www.specbee.com/blogs/how-make-interactive-websites-and-why-you-need-one "Specbee, August 21, 2019").
+Assignment is to develop an interactive and attractive website. Simply, an interactive website is a website that communicates and allows for interaction with users. Interaction doesn't just mean allowing users to “click” and “scroll”. Infact, interactive websites offers content to their users that is amusing and engaging too. [Specbee, August 21, 2019](https://www.specbee.com/blogs/how-make-interactive-websites-and-why-you-need-one "Specbee, August 21, 2019")
 
-The thing that makes a website interactive is the ability for the user to actively engage with the content and various elements. [Ironistic, July 16, 2019](https://www.ironistic.com/insights/interactive-website-design-benefits/ "Ironistic, July 16, 2019").
+The thing that makes a website interactive is the ability for the user to actively engage with the content and various elements. [Ironistic, July 16, 2019](https://www.ironistic.com/insights/interactive-website-design-benefits/ "Ironistic, July 16, 2019")
 
 ### Assignment Overview
 
