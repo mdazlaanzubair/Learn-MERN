@@ -63,15 +63,16 @@
             <!-- Pills navs -->
             <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
               <li class="nav-item" role="presentation">
-                <a class="nav-link active" id="ex1-tab-1" data-mdb-toggle="pill" href="#ex1-pills-1" role="tab"
-                  aria-controls="ex1-pills-1" aria-selected="true"><i class="fas fa-shoe-prints me-3"></i> Step 1</a>
+                <a class="nav-link rounded-0 active" id="ex1-tab-1" data-mdb-toggle="pill" href="#ex1-pills-1"
+                  role="tab" aria-controls="ex1-pills-1" aria-selected="true"><i class="fas fa-shoe-prints me-3"></i>
+                  Step 1</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="ex1-tab-2" data-mdb-toggle="pill" href="#ex1-pills-2" role="tab"
+                <a class="nav-link rounded-0" id="ex1-tab-2" data-mdb-toggle="pill" href="#ex1-pills-2" role="tab"
                   aria-controls="ex1-pills-2" aria-selected="false"><i class="fas fa-shoe-prints me-3"></i> Step 2</a>
               </li>
               <li class="nav-item" role="presentation">
-                <a class="nav-link" id="ex1-tab-3" data-mdb-toggle="pill" href="#ex1-pills-3" role="tab"
+                <a class="nav-link rounded-0" id="ex1-tab-3" data-mdb-toggle="pill" href="#ex1-pills-3" role="tab"
                   aria-controls="ex1-pills-3" aria-selected="false"><i class="fas fa-shoe-prints me-3"></i> Step 3</a>
               </li>
             </ul>
@@ -84,8 +85,8 @@
         <!-- Pills content -->
         <div class="tab-content" id="ex1-content">
           <div class="tab-pane fade show active" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
-            <h3 class="text-accent-2 main-head my-3">
-              <span class="bg-accent-2 px-2 text-light">Step 1</span>
+            <h3 class="text-accent-1 main-head my-3">
+              <span class="bg-accent-1 px-2 text-light">Step 1</span>
               Currency Conversion
             </h3>
 
@@ -121,8 +122,8 @@
           </div>
           <div class="tab-pane fade" id="ex1-pills-3" role="tabpanel" aria-labelledby="ex1-tab-3">
 
-            <h3 class="text-accent-2 main-head my-3">
-              <span class="bg-accent-2 px-2 text-light">Step 3</span>
+            <h3 class="text-accent-1 main-head my-3">
+              <span class="bg-accent-1 px-2 text-light">Step 3</span>
               Sell / Purchase
             </h3>
 
@@ -149,74 +150,51 @@
 
   <!-- calculator section -->
   <section id="calculate" class="container p-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <div class="card p-4">
-          <div class="card-body">
+    <div class="card p-4">
+      <div class="card-body">
+        <div class="row justify-content-between">
+          <div class="col-md-5">
             <h5 class="text-dark main-head h1">
               Calculate return of investment
             </h5>
-            <p class="card-title text-dark sub-head my-3">
+            <p class="card-title text-dark sub-head my-3 small">
               Simply follow the steps stated above to calculate profit / loss
             </p>
-
             <hr>
-
             <form id="calculate_roi">
 
               <!-- currency conversion -->
               <h5 class="sub-head">Currency Conversion</h5>
 
+              <!-- currencies list -->
+              <select id="currency_list">
+                <option value="null">Choose Currency</option>
+              </select>
+
               <!-- select conversion option -->
               <div class="radio-options my-3">
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="conversion_ops" id="conversion_ops_1"
-                    value="auto" checked />
+                  <input class="form-check-input" type="radio" name="conversion_ops" onclick="currencyConversion()"
+                    id="conversion_ops_1" value="auto" checked />
                   <label class="form-check-label" for="conversion_ops_1">Auto</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="conversion_ops" id="conversion_ops_2"
-                    value="manual" />
+                  <input class="form-check-input" type="radio" name="conversion_ops" onclick="currencyConversion()"
+                    id="conversion_ops_2" value="manual" />
                   <label class="form-check-label" for="conversion_ops_2">Manually</label>
                 </div>
               </div>
 
-              <!-- currencies list -->
-              <div class="form-outline mb-4">
-                <input type="email" id="form1Example1" class="form-control" />
-                <label class="form-label" for="form1Example1"></label>
-              </div>
-
-              <!-- Password input -->
-              <div class="form-outline mb-4">
-                <input type="password" id="form1Example2" class="form-control" />
-                <label class="form-label" for="form1Example2">Password</label>
-              </div>
-
-              <!-- 2 column grid layout for inline styling -->
-              <div class="row mb-4">
-                <div class="col d-flex justify-content-center">
-                  <!-- Checkbox -->
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                    <label class="form-check-label" for="form1Example3"> Remember me </label>
-                  </div>
-                </div>
-
-                <div class="col">
-                  <!-- Simple link -->
-                  <a href="#!">Forgot password?</a>
-                </div>
-              </div>
-
               <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+              <button type="submit" class="btn btn-primary btn-lg rounded-0">Sign in</button>
             </form>
+          </div>
+          <div class="col-md-6">
+            <h1 class="text-dark main-head h1">Hello World</h1>
           </div>
         </div>
       </div>
-      <div class="col-md-6"></div>
     </div>
   </section>
   <!-- calculator section -->
@@ -225,6 +203,7 @@
     <div class="row justify-content-center"></div>
   </div>
   <script src="./node_modules/mdb-ui-kit/js/mdb.min.js"></script>
+  <script src="./js/script.js" defer></script>
 </body>
 
 </html>
