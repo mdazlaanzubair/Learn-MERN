@@ -14,10 +14,8 @@ const currency_data_url =
 fetch(currency_data_url)
   .then((res) => res.json())
   .then((data) => {
-
     // looping through currencies data
     for (let currency in data) {
-
       // storing currency data in variables
       let currency_val = currency;
       let currency_name = data[currency].displayName;
@@ -58,3 +56,8 @@ function currencyConversion() {
     }
   }
 }
+
+// initializing select list
+$(document).ready(function () {
+  $(".select-currency").select2();
+});

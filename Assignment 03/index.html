@@ -1,53 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/logo/Asset 1.svg" type="image/x-icon" />
+    <title>Abacus</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="./assets/logo/Asset 1.svg" type="image/x-icon" />
-  <title>Abacus</title>
+    <!-- select 2 -->
+    <link
+      rel="stylesheet"
+      href="./node_modules/select2/dist/css/select2.min.css"
+    />
 
-  <link rel="stylesheet" href="./node_modules/mdb-ui-kit/css/mdb.min.css" />
-  <link rel="stylesheet" href="./css/style.css" />
-  <link rel="stylesheet" href="./css/helper.css" />
-</head>
+    <!-- material design kit -->
+    <link rel="stylesheet" href="./node_modules/mdb-ui-kit/css/mdb.min.css" />
 
-<body class="bg-light">
-  <!-- navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-0">
-    <div class="container justify-content-center">
-      <a class="navbar-brand main-head" href="./index.html">
-        <img src="./assets/logo/Asset 1.svg" height="50" alt="MDB Logo" loading="lazy" />
-        <!-- abacus -->
-      </a>
-    </div>
-  </nav>
-  <!-- navbar -->
+    <!-- custom styling -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/helper.css" />
+  </head>
 
-  <!-- hero section -->
-  <header id="hero" class="container p-5">
-    <div class="row justify-content-center">
-      <div class="col-md-6">
-        <h5 class="text-accent-1 main-head h1 my-3">
-          <span class="bg-accent-2 px-2 text-light">Abacus!</span> an online
-          profit calculator.
-        </h5>
-        <p class="card-title text-dark para h3 my-3">
-          Keeping in view the current trend of crypto-trading this calculator
-          is designed to calculate profit or loss.
-        </p>
-        <a href="#howto" class="btn btn-primary btn-lg rounded-0 my-2">Explore</a>
+  <body class="bg-light">
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-0">
+      <div class="container justify-content-center">
+        <a class="navbar-brand main-head" href="./index.html">
+          <img
+            src="./assets/logo/Asset 1.svg"
+            height="50"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
       </div>
-      <div class="col-md-5 d-none d-lg-block">
-        <img class="img-fluid" src="./assets/img/bg-header-trans.png" alt="Generic placeholder image" />
-      </div>
-    </div>
-  </header>
-  <!-- hero section -->
+    </nav>
+    <!-- navbar -->
 
-  <!-- how to section -->
-  <section id="howto" class="container p-5">
+    <!-- hero section -->
+    <header id="hero" class="container p-5">
+      <div class="row justify-content-center">
+        <div class="col-md-6">
+          <h5 class="text-accent-1 main-head h1 my-3">
+            <span class="bg-accent-2 px-2 text-light">Abacus!</span> an online
+            profit calculator.
+          </h5>
+          <p class="card-title text-dark para h3 my-3">
+            Keeping in view the current trend of crypto-trading this calculator
+            is designed to calculate profit or loss.
+          </p>
+          <a href="#howto" class="btn btn-primary btn-lg rounded-0 my-2"
+            >Explore</a
+          >
+        </div>
+        <div class="col-md-5 d-none d-lg-block">
+          <img
+            class="img-fluid"
+            src="./assets/img/bg-header-trans.png"
+            alt="Generic placeholder image"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- hero section -->
+
+    <!-- how to section -->
+    <!-- <section id="howto" class="container p-5">
     <div class="row justify-content-center">
       <div class="col-md-6">
         <div class="card p-4">
@@ -60,7 +78,6 @@
               There are following four simple steps to get your profit &amp;
               loss calculated.
             </p>
-            <!-- Pills navs -->
             <ul class="nav nav-pills mb-3" id="ex1" role="tablist">
               <li class="nav-item" role="presentation">
                 <a class="nav-link rounded-0 active" id="ex1-tab-1" data-mdb-toggle="pill" href="#ex1-pills-1"
@@ -76,13 +93,11 @@
                   aria-controls="ex1-pills-3" aria-selected="false"><i class="fas fa-shoe-prints me-3"></i> Step 3</a>
               </li>
             </ul>
-            <!-- Pills navs -->
           </div>
         </div>
       </div>
 
       <div class="col-md-6 p-4">
-        <!-- Pills content -->
         <div class="tab-content" id="ex1-content">
           <div class="tab-pane fade show active" id="ex1-pills-1" role="tabpanel" aria-labelledby="ex1-tab-1">
             <h3 class="text-accent-1 main-head my-3">
@@ -139,71 +154,93 @@
                 Calculate</a>
           </div>
         </div>
-        <!-- Pills content -->
       </div>
     </div>
     </div>
     </div>
     </div>
-  </section>
-  <!-- how to section -->
+  </section> -->
+    <!-- how to section -->
 
-  <!-- calculator section -->
-  <section id="calculate" class="container p-5">
-    <div class="card p-4">
-      <div class="card-body">
-        <div class="row justify-content-between">
-          <div class="col-md-5">
-            <h5 class="text-dark main-head h1">
-              Calculate return of investment
-            </h5>
-            <p class="card-title text-dark sub-head my-3 small">
-              Simply follow the steps stated above to calculate profit / loss
-            </p>
-            <hr>
-            <form id="calculate_roi">
+    <!-- calculator section -->
+    <section id="calculate" class="container p-5">
+      <div class="card p-4">
+        <div class="card-body">
+          <div class="row justify-content-between">
+            <div class="col-md-5">
+              <h5 class="text-dark main-head h1">
+                Calculate return of investment
+              </h5>
+              <p class="card-title text-dark sub-head my-3 small">
+                Simply follow the steps stated above to calculate profit / loss
+              </p>
+              <hr />
+              <form id="calculate_roi">
+                <!-- currency conversion -->
+                <h5 class="sub-head">Currency Conversion</h5>
 
-              <!-- currency conversion -->
-              <h5 class="sub-head">Currency Conversion</h5>
+                <!-- currencies list -->
+                <select id="currency_list" class="select-currency" style="width: 100%;">
+                  <option value="null">Choose Currency</option>
+                </select>
 
-              <!-- currencies list -->
-              <select id="currency_list">
-                <option value="null">Choose Currency</option>
-              </select>
+                <!-- select conversion option -->
+                <div class="radio-options my-3">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="conversion_ops"
+                      onclick="currencyConversion()"
+                      id="conversion_ops_1"
+                      value="auto"
+                      checked
+                    />
+                    <label class="form-check-label" for="conversion_ops_1"
+                      >Auto</label
+                    >
+                  </div>
 
-              <!-- select conversion option -->
-              <div class="radio-options my-3">
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="conversion_ops" onclick="currencyConversion()"
-                    id="conversion_ops_1" value="auto" checked />
-                  <label class="form-check-label" for="conversion_ops_1">Auto</label>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="conversion_ops"
+                      onclick="currencyConversion()"
+                      id="conversion_ops_2"
+                      value="manual"
+                    />
+                    <label class="form-check-label" for="conversion_ops_2"
+                      >Manually</label
+                    >
+                  </div>
                 </div>
 
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="conversion_ops" onclick="currencyConversion()"
-                    id="conversion_ops_2" value="manual" />
-                  <label class="form-check-label" for="conversion_ops_2">Manually</label>
-                </div>
-              </div>
-
-              <!-- Submit button -->
-              <button type="submit" class="btn btn-primary btn-lg rounded-0">Sign in</button>
-            </form>
-          </div>
-          <div class="col-md-6">
-            <h1 class="text-dark main-head h1">Hello World</h1>
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-lg rounded-0">
+                  Calculate
+                </button>
+              </form>
+            </div>
+            <div class="col-md-6">
+              <h1 class="text-dark main-head h1">Hello World</h1>
+            </div>
           </div>
         </div>
       </div>
+    </section>
+    <!-- calculator section -->
+
+    <div class="container py-5">
+      <div class="row justify-content-center"></div>
     </div>
-  </section>
-  <!-- calculator section -->
 
-  <div class="container py-5">
-    <div class="row justify-content-center"></div>
-  </div>
-  <script src="./node_modules/mdb-ui-kit/js/mdb.min.js"></script>
-  <script src="./js/script.js" defer></script>
-</body>
-
+    <script
+      src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"
+      type="text/javascript"
+    ></script>
+    <script src="./node_modules/select2/dist/js/select2.min.js"></script>
+    <script src="./node_modules/mdb-ui-kit/js/mdb.min.js"></script>
+    <script src="./js/script.js" defer></script>
+  </body>
 </html>
