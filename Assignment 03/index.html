@@ -167,7 +167,7 @@
       <div class="card p-4">
         <div class="card-body">
           <div class="row justify-content-between">
-            <div class="col-md-5">
+            <div class="col-md">
               <h5 class="text-dark main-head h1">
                 Calculate return of investment
               </h5>
@@ -177,53 +177,57 @@
               <hr />
               <form id="calculate_roi">
                 <!-- currency conversion -->
-                <h5 class="sub-head">Currency Conversion</h5>
+                <h5 class="sub-head">Select Currency</h5>
+                <p class="para">What was the currency of your investment?</p>
 
-                <!-- currencies list -->
-                <select id="currency_list" class="select-currency" style="width: 100%;">
-                  <option value="null">Choose Currency</option>
-                </select>
-
-                <!-- select conversion option -->
+                <!-- selection between USD or Other currency -->
                 <div class="radio-options my-3">
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
+                      id="is_USD"
                       type="radio"
-                      name="conversion_ops"
-                      onclick="currencyConversion()"
-                      id="conversion_ops_1"
-                      value="auto"
-                      checked
+                      name="usd_or_not"
+                      onchange="usd_or_other()"
+                      value="usd"
                     />
-                    <label class="form-check-label" for="conversion_ops_1"
-                      >Auto</label
+                    <label class="form-check-label" for="is_USD">
+                      US Dollars</label
                     >
                   </div>
 
                   <div class="form-check form-check-inline">
                     <input
                       class="form-check-input"
+                      id="is_Other"
                       type="radio"
-                      name="conversion_ops"
-                      onclick="currencyConversion()"
-                      id="conversion_ops_2"
-                      value="manual"
+                      name="usd_or_not"
+                      onchange="usd_or_other()"
+                      value="other"
                     />
-                    <label class="form-check-label" for="conversion_ops_2"
-                      >Manually</label
+                    <label class="form-check-label" for="is_Other"
+                      >Other Currency</label
                     >
                   </div>
                 </div>
 
+                <!-- currencies list -->
+                <select
+                  id="currency_list"
+                  class="d-none"
+                  style="width: 100%"
+                >
+                  <option value="null">Choose Currency</option>
+                </select>
+
                 <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-lg rounded-0">
+                <button
+                  type="submit"
+                  class="btn btn-primary btn- rounded-0 mt-3"
+                >
                   Calculate
                 </button>
               </form>
-            </div>
-            <div class="col-md-6">
-              <h1 class="text-dark main-head h1">Hello World</h1>
             </div>
           </div>
         </div>
@@ -241,6 +245,7 @@
     ></script>
     <script src="./node_modules/select2/dist/js/select2.min.js"></script>
     <script src="./node_modules/mdb-ui-kit/js/mdb.min.js"></script>
+    <script src="./js/plugin.js" defer></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>
