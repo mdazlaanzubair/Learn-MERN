@@ -19,34 +19,57 @@
     <!-- * Select2 Plugin CSS-->
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
+    <!-- * Toaster Plugin CSS-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet" />
+
     <!-- * custom script -->
     <link rel="stylesheet" href="./styles/styles.css">
 </head>
 
 <body>
-
     <div id="app" class="container p-5">
         <!-- ? The ABACUS Crypto Investment Calculator -->
         <!-- * start of calculator-section -->
-        <div class="row justify-content-center">
-            <div class="col-md-8">
-                <div class="card bg-dark">
-                    <div class="card-header">
-                        <h4 class="card-title">The Abacus</h4>
+        <div class="row justify-content-center g-3">
+            <div class="col-md-6">
+                <div class="card bg-dark border-0 p-2">
+                    <div class="card-header text-center">
+                        <h3 class="text-light my-0">The Abacus</h3>
                     </div>
-                    <div id="investment" class="card-body">
-                        <h5 class="text-light">How much is your investment?</h5>
-                        <div class="row justify-content-center">
-                            <div class="col-md-5">
-                                <select id="currency" class="form-select" required>
-                                    <option value="1" selected>USD</option>
-                                    <option value="2">Two</option>
-                                    <option value="3">Three</option>
+                    <div id="investment-section" class="card-body">
+                        <div class="row justify-content-center g-3 my-2">
+                            <div class="col-md-12">
+                                <label for="investment" class="form-label">How much you have
+                                    invested?</label>
+                                <input id="investment" type="text" class="form-control com_sep_amts"
+                                    placeholder="e.g. 1,000" required autofocus>
+                                <small class="text-primary mt-2 float-start">Make sure your investments shall be in US
+                                    Dollars</small>
+                            </div>
+                            <div class="col-md-12">
+                                <label for="crypto_list" class="form-label">In which crypto you have invested?
+                                </label>
+                                <select id="crypto_list" class="form-select w-100">
+                                    <option>helloo</option>
+                                    <option>good</option>
+                                    <option>world</option>
+                                    <option>eat</option>
                                 </select>
                             </div>
-                            <div class="col-md">
-                                <input id="investment" type="text" class="form-control" placeholder="e.g. 1,000"
-                                    required>
+                            <div class="col-md-12">
+                                <label for="crypto_list" class="form-label">Initial Coin Price <strong
+                                        class="crypto_selected"></strong>
+                                </label>
+                                <input id="buy_cost" type="text" class="form-control com_sep_amts"
+                                    placeholder="e.g. 1,000" required autofocus>
+
+                            </div>
+                            <div class="col-md-12">
+                                <label for="crypto_list" class="form-label">Selling Coin Price <strong
+                                        class="crypto_selected"></strong>
+                                </label>
+                                <input id="sell_cost" type="text" class="form-control com_sep_amts"
+                                    placeholder="e.g. 1,000" required autofocus>
                             </div>
                         </div>
                     </div>
@@ -72,12 +95,15 @@
     <!-- * Select2 - JS Plugin -->
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 
+    <!-- * Toaster - JS Plugin -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
     <!-- * Tilt - JS Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tilt.js/1.2.1/tilt.jquery.min.js"></script>
 
     <!-- * Cleave - JS Plugin -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cleave.js/1.0.2/cleave.min.js"></script>
-    
+
     <!-- * custom script -->
     <script type="module" src="./scripts/script.js"></script>
 </body>

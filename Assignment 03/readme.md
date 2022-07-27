@@ -10,7 +10,7 @@ The thing that makes a website interactive is the ability for the user to active
 
 This assignment is an online Return On Investment (ROI) calculator based on user input. Keeping in view the current trend of crypto-trading this calculator is designed to calculate/predict profit or loss on the invested amount. However, it can be used to calculate any sort of investment in any market. 
 
-Furthermore, there is a crypto-data API has been used to fetch lates updates of the crypto world in order to keep the user well informed. 
+Furthermore, there is a crypto-data API has been used to fetch latest updates of the crypto world in order to keep the user well informed. 
 
 This project is built with following technologies:
 
