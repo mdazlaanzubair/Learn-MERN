@@ -40,10 +40,45 @@ input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="color"]:focus,
 .uneditable-input:focus {
-    color: #63619e;
+    color: rgb(99, 97, 158);
     font-weight: bolder;
     background-color: #160429;
     border-color: #63619ecc;
     box-shadow: 0 5px 5px #00000013 inset, 0 0 10px #63619e99;
     outline: 0 none;
+}
+
+/* ! changing headings glow */
+h3.text-primary {
+    text-shadow: 0 0 1px rgb(99 97 158 / 60%), 0 0 3px rgb(99 97 158 / 50%), 0 0 0.5rem rgb(99 97 158 / 30%), 0 0 2rem rgb(99 97 158 / 20%);
+}
+
+/* ? CSS Custom Border Animation */
+.shadow-custom {
+    box-shadow: 16px 14px 20px #0f01248c;
+}
+
+.card_border_animate {
+    position: relative;
+    overflow: hidden;
+}
+
+.card_border_animate::before {
+    content: "";
+    background: conic-gradient(#6f42c1 20deg,
+            transparent 120deg);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-360deg);
+    }
 }

@@ -1,4 +1,3 @@
-console.log("Functions Partial Loaded Successfully");
 // ? This file contain custom made functions in order to make things readable
 
 // ? Declaring Data object which grabs all data used in this app
@@ -6,12 +5,13 @@ export let data = {
   base_url: "https://pro-api.coinmarketcap.com/v1/cryptocurrency", // denotes the base url from which data is to fetched
   api_key: "CMC_PRO_API_KEY=2d1e1f18-605e-4361-8f47-cd0abb81d1a4", // denotes the api key of the base url from which data is to fetched
   investment: 0, // denotes the actual amount invested
+  current_rate: 0, // denotes the current price of selected crypto
   buy_cost: 0, // denotes the initial purchase price
   sell_cost: 0, // denotes the price on which crypto will be sell
   one_usd_to_crypto: 0, // denotes 1 USD is equal to how much crypto
   crypto_purchased: 0, // denotes how much crypto purchased with the invested amount
   investment_after_sell: 0, // denotes the value of investment after selling crypto
-  return: 0, // denotes return on investment ROI
+  earned: 0, // denotes return on investment ROI
   profit: 0, // denotes profit on investment in %age
   crypto: "Bitcoin", // crypto selected or invested in
 };
@@ -69,19 +69,20 @@ export const amt_converter = (amount) => {
   return converted_amt;
 };
 
+// ! function is terminated may be used later
 // ? Function - 04
 // * This function is used to grab complete form values and store in Data object
-export const get_form_data = () => {
-  // * getting values of all inputs from form
-  //   const investment = grab_elem("#investment", "value");
-  //   const buy_cost = grab_elem("#buy_cost", "value");
-  //   const sell_cost = grab_elem("#sell_cost", "value");
-  //   data.crypto = grab_elem("#crypto_list", "value");
-  // * converting amounts and saving in Data object
-  //   data.investment = amt_converter(investment);
-  //   data.buy_cost = amt_converter(buy_cost);
-  //   data.sell_cost = amt_converter(sell_cost);
-};
+// export const get_form_data = () => {
+// * getting values of all inputs from form
+// const investment = grab_elem("#investment", "value");
+// const buy_cost = grab_elem("#buy_cost", "value");
+// const sell_cost = grab_elem("#sell_cost", "value");
+// data.crypto = grab_elem("#crypto_list", "value");
+// * converting amounts and saving in Data object
+// data.investment = amt_converter(investment);
+// data.buy_cost = amt_converter(buy_cost);
+// data.sell_cost = amt_converter(sell_cost);
+// };
 
 // ? Function - 04
 // * This function is to calculator of this application
@@ -100,10 +101,10 @@ export const calculation = () => {
 
   // ? How much profit gained
   // * calculating return on investment
-  data.return = data.investment_after_sell - data.investment;
+  data.earned = data.investment_after_sell - data.investment;
 
   // *calculating profit in %age
-  data.profit = (data.return * 100) / data.investment;
+  data.profit = (data.earned * 100) / data.investment;
 };
 
 // ? Function - 05
@@ -167,39 +168,110 @@ export const get_crypto_rate = (crypto_id) => {
     .then((res) => res.json())
     .then((results) => {
       // * setting current crypto price in variable
-      const currenct_rate = results.data[crypto_id].quote.USD.price.toFixed(2);
+      let crypto_current_rate = results.data[crypto_id].quote.USD.price;
 
-      // * .toFixed() returns string, therefore converting in float again
-      data.buy_cost = parseFloat(currenct_rate);
+      // ? conditionally rounding off figure for crypto buy_cost and current_rate in data Object
+      // * if crypto value is greater than 1 ? convert
+      // * else not
+      if (crypto_current_rate > 0) {
+        data.buy_cost = parseFloat(crypto_current_rate.toFixed(2));
+        data.current_rate = parseFloat(crypto_current_rate.toFixed(2));
+      } else {
+        data.buy_cost = crypto_current_rate;
+        data.current_rate = crypto_current_rate;
+      }
 
-      // * setting initial/purchase price in UI input box
-      // ? initial price shall be the currenct price of the crypto
-      input_buy_cost.value = data.buy_cost;
-
-      // * setting final/selling price in UI input box
-      // ? selling price shall be 10% higher than the pruchased price
+      // ? calculating selling price of crypto as default
+      // * selling price shall be 10% higher than the purchased price
+      // * calculating 10% of purchased price
       let ten_per_cent = data.buy_cost * 0.1;
-      data.sell_cost = parseFloat(ten_per_cent.toFixed(2)) + data.buy_cost;
-      input_sell_cost.value = data.sell_cost;
 
-      // * test logs
-      console.log(results.data[crypto_id].name);
-      console.log(results.data[crypto_id].symbol);
-      console.log(results.data[crypto_id].quote.USD.price);
+      // ? adding 10% in buy_cost inorder to set default sell_cost in data Object
+      // ! there is no need to round off sell_cost because it is derived from already rounded off value
+      data.sell_cost = ten_per_cent + data.buy_cost;
+
+      // ? setting values in UI input element
+      // * setting buy_cost and sell_cost values as default values
+      input_buy_cost.value = data.buy_cost;
+      input_sell_cost.value = data.sell_cost;
     });
+};
+
+// ? Function - 07
+// * This function is to set results after calculation and display in the DOM
+export const result_show = () => {
+  // * getting the card from DOM where result will be shown
+  const result_card_elem = grab_elem("#result_card_elem", "element");
+
+  // converting all number values in commas thousand separated
+  const invested_amt = data.investment.toLocaleString("en-US");
+  const purchased_coins = data.crypto_purchased.toLocaleString("en-US");
+  const buy_rate = data.buy_cost.toLocaleString("en-US");
+  const current_rate = data.current_rate.toLocaleString("en-US");
+  const sell_rate = data.sell_cost.toLocaleString("en-US");
+  const amt_after_sell = data.investment_after_sell.toLocaleString("en-US");
+  const earned = data.earned.toLocaleString("en-US");
+  const profit = data.profit.toFixed(2);
+
+  // setting elements to be displayed in DOM
+  const result_data = `<li
+                                class="list-group-item d-flex justify-content-between align-items-start bg-dark text-primary fw-bold">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold text-primary">Investment</div>
+                                    <small class="text-white">
+                                        You have invested <strong class="result_highlights">USD ${invested_amt}</strong> in <strong
+                                            class="result_highlights">${
+                                              data.crypto
+                                            }</strong>.
+                                    </small>
+                                </div>
+                                <span class="badge bg-primary rounded-pill text-dark float-end">${profit}% profit
+                                    earned</span>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-start bg-dark text-primary fw-bold">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold text-primary">Crypto Purchased</div>
+                                    <small class="text-white">- You have bought <strong class="result_highlights">${purchased_coins}
+                                            ${data.crypto}</strong> on
+                                        the rate of <strong class="result_highlights">USD ${buy_rate}</strong>. <br> - However, the
+                                        current
+                                        rate
+                                        of <strong class="result_highlights">${
+                                          data.crypto
+                                        }</strong> is <strong class="result_highlights">USD
+                                            ${current_rate}</strong>.</small>
+                                </div>
+                            </li>
+                            <li
+                                class="list-group-item d-flex justify-content-between align-items-start bg-dark text-primary fw-bold">
+                                <div class="ms-2 me-auto">
+                                    <div class="fw-bold text-primary">Return on Investment</div>
+                                    <small class="text-white">- You sell <strong class="result_highlights">${
+                                      data.crypto
+                                    }</strong> on
+                                        the rate of <strong class="result_highlights">USD ${sell_rate}</strong>, and got
+                                        <strong class="result_highlights">USD ${amt_after_sell}</strong> after selling. <br> - You have ${
+    earned < 0 ? "lossed" : "earned"
+  } <strong class="result_highlights">USD ${earned}</strong> which is <strong
+                                            class="result_highlights">${profit}%</strong> of your investment.
+                                </div>
+                            </li>`;
+
+  // pushing results data in the result_card_elem
+  result_card_elem.insertAdjacentHTML("beforeend", result_data);
+
+  // displaying results in the DOM
+  elem_toggle("#results_card", "show");
 };
 
 // ? Function - xx
 // * This function is used to grab complete form values
 export const form_submit = () => {
-  // * calling calculator
+  // ? everytime form submits following functions will be executed
+  // * calculating user input
   calculation();
 
-  console.log("You Invested", data.investment, "In", data.crypto);
-  console.log("Purchased On", data.buy_cost);
-  console.log("Crypto Purchased in 1 USD", data.one_usd_to_crypto);
-  console.log("You got", data.crypto_purchased, data.crypto);
-  console.log("You Sell", data.crypto, "On", data.sell_cost);
-  console.log("Your Investment after Selling", data.investment_after_sell);
-  console.log("You profit is", data.return, "i.e.", `${data.profit}%`);
+  // * showing calculated results
+  result_show();
 };

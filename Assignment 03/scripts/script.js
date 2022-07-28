@@ -71,3 +71,10 @@ toastr.options = {
   showMethod: "fadeIn",
   hideMethod: "fadeOut",
 };
+
+// ? initializing Tilt JS plugin
+$(".tilt_card").tilt({
+  glare: true,
+  maxGlare: 0.09,
+  scale: 0.9,
+});
