@@ -10,16 +10,23 @@ The thing that makes a website interactive is the ability for the user to active
 
 This assignment is an online Return On Investment (ROI) calculator based on user input. Keeping in view the current trend of crypto-trading this calculator is designed to calculate/predict profit or loss on the invested amount. However, it can be used to calculate any sort of investment in any market.
 
-Furthermore, there is a crypto-data API has been used to fetch latest updates of the crypto world in order to keep the user well informed.
-
-This project is built with following technologies:
+This basic investment calculator application is built with following technologies, in order to make it more interactive and attractive.
 
 - HTML/CSS/Javascript
-- Frontend UI Kit => [Material Design Bootstrap UI KIT](https://mdbootstrap.com/ "Material Design Bootstrap UI KIT"), along with a crypto API stated above.
-- Data API => [Coinmarketcap](https://mdbootstrap.com/ "Coinmarketcap"), along with a crypto API stated above.
+- [Bootstrap](https://getbootstrap.com/ "Bootstrap") - An open-source CSS framework.
+- [Bootswatch](https://bootswatch.com/ "Bootswatch") - A theme collection for Bootstrap.
+- [jQuery](https://jquery.com/ "jQuery") - A fast, small, and feature-rich JavaScript library, designed to simplify HTML DOM tree traversal and manipulation, as well as event handling, CSS animation, and etc.
+- [Animate.css](https://animate.style/ "Animate.css") - A cross browser, ready to use css animation library.
+- [Select2](https://select2.org/ "Select2") - A jQuery based replacement of select. Mostly used for searchable and multi-select options.
+- [Toastr](https://codeseven.github.io/toastr/ "Toastr") - A Javascript library for non-blocking notifications.
+- [Tilt JS](https://gijsroge.github.io/tilt.js/ "Tilt JS") - A small easy to use 60+fps requestAnimationFrame powered parallax hover tilt effect for jQuery.
+- [Cleave JS](https://nosir.github.io/cleave.js/ "Cleave") - A Javascript library used to format input field in real-time while typing.
+- [Particles JS](https://vincentgarreau.com/particles.js/ "Particles JS") - A lightweight JavaScript library used for creating particles which looks likes the vertices of polygon, used for creating background live animation.
+- [Coinmarketcap API](https://coinmarketcap.com/ "Coinmarketcap API") - World's most-referenced price-tracking website for cryptoassets in the rapidly growing cryptocurrency space..
 
-<!-- Want to see it live? [click here](https://azlaan4.github.io/Learn-MERN/Assignment%2003/index.html "click here") -->
+Want to see it live? [click here](https://azlaan4.github.io/Learn-MERN/Assignment%2003/index.html "click here")
 
 ### Preview
 
-**`Not available yet`**
+
+[![Webpage Preview](./assets/imgs/site-preview.png "Webpage Preview")](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2002/index.html "Webpage Preview")
