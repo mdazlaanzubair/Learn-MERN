@@ -30,6 +30,10 @@
 </head>
 
 <body>
+
+    <!-- particles effect -->
+    <div id="particles-js"></div>
+
     <div id="app" class="container p-5">
         <!-- ? The ABACUS Crypto Investment Calculator -->
         <!-- * start of calculator-section -->
@@ -46,7 +50,8 @@
                                     invested?</label>
                                 <input id="investment" type="text" class="form-control com_sep_amts"
                                     placeholder="e.g. 1,000" required autofocus>
-                                <small class="text-primary mt-2 float-start">Make sure your investments shall be in US
+                                <small class="text-primary mt-2 float-start">Make sure your investments shall be in
+                                    US
                                     Dollars</small>
                             </div>
                             <div class="col-md-12">
@@ -69,7 +74,8 @@
                                 </label>
                                 <input id="sell_cost" type="text" class="form-control com_sep_amts"
                                     placeholder="e.g. 1,000" required autofocus>
-                                <small class="text-primary mt-2 float-start">By default the selling price is 10% higher
+                                <small class="text-primary mt-2 float-start">By default the selling price is 10%
+                                    higher
                                     than the purchase.</small>
                             </div>
                         </div>
@@ -96,6 +102,7 @@
         <!-- * end of calculator-section -->
     </div>
 
+
     <!-- * jQuery -->
     <script src="./scripts/plugins_libs/jquery/jquery.min.js"></script>
 
@@ -115,6 +122,10 @@
 
     <!-- * Cleave - JS Plugin -->
     <script src="./scripts/plugins_libs/cleave_js/cleave.min.js"></script>
+
+    <!-- * Particles - JS Plugin -->
+    <script src="./scripts/plugins_libs/particles_js/particles.js"></script>
+    <script src="./scripts/plugins_libs/particles_js/particles_demo.js"></script>
 
     <!-- * custom script -->
     <script type="module" src="./scripts/script.js"></script>

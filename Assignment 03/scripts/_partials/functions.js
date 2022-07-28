@@ -188,7 +188,8 @@ export const get_crypto_rate = (crypto_id) => {
 
       // ? adding 10% in buy_cost inorder to set default sell_cost in data Object
       // ! there is no need to round off sell_cost because it is derived from already rounded off value
-      data.sell_cost = ten_per_cent + data.buy_cost;
+      let sell_cost = ten_per_cent + data.buy_cost;
+      data.sell_cost = parseFloat(sell_cost.toFixed(2));
 
       // ? setting values in UI input element
       // * setting buy_cost and sell_cost values as default values
@@ -252,17 +253,30 @@ export const result_show = () => {
                                     }</strong> on
                                         the rate of <strong class="result_highlights">USD ${sell_rate}</strong>, and got
                                         <strong class="result_highlights">USD ${amt_after_sell}</strong> after selling. <br> - You have ${
-    earned < 0 ? "lossed" : "earned"
+    data.earned < 0 ? "lossed" : "earned"
   } <strong class="result_highlights">USD ${earned}</strong> which is <strong
                                             class="result_highlights">${profit}%</strong> of your investment.
                                 </div>
                             </li>`;
 
   // pushing results data in the result_card_elem
+  // making the card empty before pushing in the result_data
+  result_card_elem.innerHTML = "";
   result_card_elem.insertAdjacentHTML("beforeend", result_data);
 
   // displaying results in the DOM
   elem_toggle("#results_card", "show");
+
+  // creating alert message based upon proft or loss
+  if (data.earned > 0) {
+    toastr["success"](
+      `Booyeah! You have earned <b>${profit}%</b> profit on <b>USD${invested_amt}</b>`
+    );
+  } else {
+    toastr["warning"](
+      `Whoops! You have lossed <b>${profit}%</b> on <b>USD${invested_amt}</b>`
+    );
+  }
 };
 
 // ? Function - xx

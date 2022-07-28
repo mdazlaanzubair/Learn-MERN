@@ -50,7 +50,25 @@ input[type="color"]:focus,
 
 /* ! changing headings glow */
 h3.text-primary {
+    text-shadow: 0 0 1px rgb(99 97 158 / 60%), 0 0 3px rgb(99 97 158 / 50%),
+        0 0 0.5rem rgb(99 97 158 / 30%),
+        0 0 2rem rgb(99 97 158 / 20%);
+}
+
+/* ! highlighting results in results card */
+.result_highlights {
+    color: #b08fec;
+    text-decoration: underline;
     text-shadow: 0 0 1px rgb(99 97 158 / 60%), 0 0 3px rgb(99 97 158 / 50%), 0 0 0.5rem rgb(99 97 158 / 30%), 0 0 2rem rgb(99 97 158 / 20%);
+}
+
+/* !controlling particle.js div */
+canvas {
+    display: block;
+    top: 0%;
+    width: 100%;
+    height: 100%;
+    position: absolute;
 }
 
 /* ? CSS Custom Border Animation */
