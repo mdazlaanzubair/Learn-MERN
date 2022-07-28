@@ -29,4 +29,4 @@ Want to see it live? [click here](https://azlaan4.github.io/Learn-MERN/Assignmen
 ### Preview
 
 
-[![Webpage Preview](./assets/imgs/site-preview.png "Webpage Preview")](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2002/index.html "Webpage Preview")
+[![Webpage Preview](./asset/imgs/site-preview.png "Webpage Preview")](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2002/index.html "Webpage Preview")
