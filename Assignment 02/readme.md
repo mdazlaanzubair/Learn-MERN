@@ -12,7 +12,7 @@ Multi-page website templates can be scaled without limitation. Pages can be adde
 
 The best way to practice a multi-page website is an E-Commerce Web Store. Here is an E-Commerce website, built with with HTML/CSS/Javascript and [Material Design Bootstrap UI KIT](https://mdbootstrap.com/ "Material Design Bootstrap UI KIT").
 
-Want to see it live? [click here](https://azlaan4.github.io/Learn-MERN/Assignment%2002/index.html "click here")
+Want to see it live? [click here](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2002/index.html "click here")
 
 ### Preview
 
