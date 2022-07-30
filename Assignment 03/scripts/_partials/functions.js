@@ -2,7 +2,8 @@
 
 // ? Declaring Data object which grabs all data used in this app
 export let data = {
-  base_url: "https://pro-api.coinmarketcap.com/v1/cryptocurrency", // denotes the base url from which data is to fetched
+  base_url:
+    "https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency", // denotes the base url from which data is to fetched
   investment: 1, // denotes the actual amount invested
   current_rate: 1, // denotes the current price of selected crypto
   buy_cost: 1, // denotes the initial purchase price
