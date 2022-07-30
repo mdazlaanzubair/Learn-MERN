@@ -24,9 +24,9 @@ This basic investment calculator application is built with following technologie
 - [Particles JS](https://vincentgarreau.com/particles.js/ "Particles JS") - A lightweight JavaScript library used for creating particles which looks likes the vertices of polygon, used for creating background live animation.
 - [Coinmarketcap API](https://coinmarketcap.com/ "Coinmarketcap API") - World's most-referenced price-tracking website for cryptoassets in the rapidly growing cryptocurrency space..
 
-Want to see it live? [click here](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2003/index.html "click here")
+Want to see it live? [click here](https://theabacus.netlify.app/ "click here")
 
 ### Preview
 
 
-[![Webpage Preview](./asset/imgs/site-preview.png "Webpage Preview")](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2003/index.html "Webpage Preview")
+[![Webpage Preview](./asset/imgs/site-preview.png "Webpage Preview")](https://theabacus.netlify.app/ "Webpage Preview")
