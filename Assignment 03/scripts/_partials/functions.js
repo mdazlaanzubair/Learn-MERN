@@ -3,14 +3,13 @@
 // ? Declaring Data object which grabs all data used in this app
 export let data = {
   base_url: "https://pro-api.coinmarketcap.com/v1/cryptocurrency", // denotes the base url from which data is to fetched
-  api_key: "CMC_PRO_API_KEY=2d1e1f18-605e-4361-8f47-cd0abb81d1a4", // denotes the api key of the base url from which data is to fetched
-  investment: 0, // denotes the actual amount invested
-  current_rate: 0, // denotes the current price of selected crypto
-  buy_cost: 0, // denotes the initial purchase price
-  sell_cost: 0, // denotes the price on which crypto will be sell
-  one_usd_to_crypto: 0, // denotes 1 USD is equal to how much crypto
-  crypto_purchased: 0, // denotes how much crypto purchased with the invested amount
-  investment_after_sell: 0, // denotes the value of investment after selling crypto
+  investment: 1, // denotes the actual amount invested
+  current_rate: 1, // denotes the current price of selected crypto
+  buy_cost: 1, // denotes the initial purchase price
+  sell_cost: 1, // denotes the price on which crypto will be sell
+  one_usd_to_crypto: 1, // denotes 1 USD is equal to how much crypto
+  crypto_purchased: 1, // denotes how much crypto purchased with the invested amount
+  investment_after_sell: 1, // denotes the value of investment after selling crypto
   earned: 0, // denotes return on investment ROI
   profit: 0, // denotes profit on investment in %age
   crypto: "Bitcoin", // crypto selected or invested in
@@ -69,21 +68,6 @@ export const amt_converter = (amount) => {
   return converted_amt;
 };
 
-// ! function is terminated may be used later
-// ? Function - 04
-// * This function is used to grab complete form values and store in Data object
-// export const get_form_data = () => {
-// * getting values of all inputs from form
-// const investment = grab_elem("#investment", "value");
-// const buy_cost = grab_elem("#buy_cost", "value");
-// const sell_cost = grab_elem("#sell_cost", "value");
-// data.crypto = grab_elem("#crypto_list", "value");
-// * converting amounts and saving in Data object
-// data.investment = amt_converter(investment);
-// data.buy_cost = amt_converter(buy_cost);
-// data.sell_cost = amt_converter(sell_cost);
-// };
-
 // ? Function - 04
 // * This function is to calculator of this application
 export const calculation = () => {
@@ -132,7 +116,7 @@ export const crypto_currency_fetcher = () => {
           option.innerHTML =
             crypto_currency.symbol + " - " + crypto_currency.name;
 
-          // selecting BTC by default
+          // * selecting BTC by default
           if (
             crypto_currency.id === 1 &&
             crypto_currency.symbol === "BTC" &&
@@ -154,7 +138,14 @@ export const crypto_currency_fetcher = () => {
 // * This function accepts argument that contain id of crypto currency to be fetched
 export const get_crypto_rate = (crypto_id) => {
   // * creating url to be fetch
-  const url = `${data.base_url}/quotes/latest?id=${crypto_id}&${data.api_key}`;
+  // const url = `${data.base_url}/quotes/latest?id=${crypto_id}&${data.api_key}`;
+  const url = `${data.base_url}/quotes/latest?id=${crypto_id}`;
+  const url_options = {
+    method: "GET",
+    headers: {
+      "X-CMC_PRO_API_KEY": "2d1e1f18-605e-4361-8f47-cd0abb81d1a4",
+    },
+  };
 
   // * fetching input UI element whose values shall be set as the crypto selected
   // * contains the intial/purchase price of crypto
@@ -164,7 +155,7 @@ export const get_crypto_rate = (crypto_id) => {
   const input_sell_cost = grab_elem("#sell_cost", "element");
 
   // * fetching the recent crypto rates
-  fetch(url)
+  fetch(url, url_options)
     .then((res) => res.json())
     .then((results) => {
       // * setting current crypto price in variable
@@ -272,6 +263,8 @@ export const result_show = () => {
     toastr["success"](
       `Booyeah! You have earned <b>${profit}%</b> profit on <b>USD${invested_amt}</b>`
     );
+  } else if (data.earned === 0) {
+    toastr["info"](`You have'nt earned or loss on <b>USD${invested_amt}</b>`);
   } else {
     toastr["warning"](
       `Whoops! You have lossed <b>${profit}%</b> on <b>USD${invested_amt}</b>`

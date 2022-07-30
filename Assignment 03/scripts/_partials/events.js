@@ -1,4 +1,3 @@
-console.log("Events Partial Loaded Successfully");
 // * Including functions partial
 import * as cf from "./functions.js";
 
