@@ -26,7 +26,12 @@ This basic investment calculator application is built with following technologie
 
 Want to see it live? [click here](https://theabacus.netlify.app/ "click here")
 
-### Preview
+### Issue
 
+Due the permission issue of Cross-Origin Resource Sharing (CORS) Policy you need to [Allow CORS](https://cors-anywhere.herokuapp.com/corsdemo "Allow CORS") before proceeding with the calculator.
+
+This is not an error but a security measure to secure users or the website which you are accessing from a potential security breach. It is a mechanism to restrict users from accessing shared resources.
+
+### Preview
 
 [![Webpage Preview](./asset/imgs/site-preview.png "Webpage Preview")](https://theabacus.netlify.app/ "Webpage Preview")
