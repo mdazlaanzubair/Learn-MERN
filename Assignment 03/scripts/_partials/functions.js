@@ -2,18 +2,17 @@
 
 // ? Declaring Data object which grabs all data used in this app
 export let data = {
-  base_url:
-    "https://cors-anywhere.herokuapp.com/https://pro-api.coinmarketcap.com/v1/cryptocurrency", // denotes the base url from which data is to fetched
-  investment: 1, // denotes the actual amount invested
-  current_rate: 1, // denotes the current price of selected crypto
-  buy_cost: 1, // denotes the initial purchase price
-  sell_cost: 1, // denotes the price on which crypto will be sell
-  one_usd_to_crypto: 1, // denotes 1 USD is equal to how much crypto
-  crypto_purchased: 1, // denotes how much crypto purchased with the invested amount
-  investment_after_sell: 1, // denotes the value of investment after selling crypto
-  earned: 0, // denotes return on investment ROI
-  profit: 0, // denotes profit on investment in %age
-  crypto: "Bitcoin", // crypto selected or invested in
+  proxy_server: "http://127.0.0.1:3000/", // * denotes the base url to the proxy server
+  investment: 1, // * denotes the actual amount invested
+  current_rate: 1, // * denotes the current price of selected crypto
+  buy_cost: 1, // * denotes the initial purchase price
+  sell_cost: 1, // * denotes the price on which crypto will be sell
+  one_usd_to_crypto: 1, // * denotes 1 USD is equal to how much crypto
+  crypto_purchased: 1, // * denotes how much crypto purchased with the invested amount
+  investment_after_sell: 1, // * denotes the value of investment after selling crypto
+  earned: 0, // * denotes return on investment ROI
+  profit: 0, // * denotes profit on investment in %age
+  crypto: "Bitcoin", // * crypto selected or invested in
 };
 
 // ? Function - 01
@@ -138,14 +137,18 @@ export const crypto_currency_fetcher = () => {
 // * This function is to fetch current rates and details of the crypto currency
 // * This function accepts argument that contain id of crypto currency to be fetched
 export const get_crypto_rate = (crypto_id) => {
-  // * creating url to be fetch
-  // const url = `${data.base_url}/quotes/latest?id=${crypto_id}&${data.api_key}`;
-  const url = `${data.base_url}/quotes/latest?id=${crypto_id}`;
+
+  // * creating options for the url to be fetch
   const url_options = {
-    method: "GET",
+    method: "POST",
     headers: {
-      "X-CMC_PRO_API_KEY": "2d1e1f18-605e-4361-8f47-cd0abb81d1a4",
+      "Content-Type": "application/json",
     },
+    body: JSON.stringify({
+      // * converting crypto_id into string and sending it to 
+      // * proxy server in order to avoid CORS Error
+      id: crypto_id,
+    }),
   };
 
   // * fetching input UI element whose values shall be set as the crypto selected
@@ -156,7 +159,7 @@ export const get_crypto_rate = (crypto_id) => {
   const input_sell_cost = grab_elem("#sell_cost", "element");
 
   // * fetching the recent crypto rates
-  fetch(url, url_options)
+  fetch(data.proxy_server, url_options)
     .then((res) => res.json())
     .then((results) => {
       // * setting current crypto price in variable
