@@ -2,7 +2,8 @@
 
 // ? Declaring Data object which grabs all data used in this app
 export let data = {
-  proxy_server: "http://127.0.0.1:3000/", // * denotes the base url to the proxy server
+  proxy_server: "https://abacus-proxy-server.herokuapp.com/", // * denotes the base url to the proxy server
+  // proxy_server: "http://127.0.0.1:3000/", // * denotes the base url to the proxy server
   investment: 1, // * denotes the actual amount invested
   current_rate: 1, // * denotes the current price of selected crypto
   buy_cost: 1, // * denotes the initial purchase price
