@@ -1,4 +1,4 @@
-# Assignment 3
+# Assignment 4
 
 ### Preamble
 
@@ -6,9 +6,9 @@ Assignment is to perform CRUD operations by creating an API using GET | POST | P
 
 ### Assignment Overview
 
-This assignment is an online Phonebook where a user can save the contacts. It is a basic project but implements all CRUD operations that are required in an application.
+This assignment is an online Todo app where a user can list down their daily tasks. It is a basic project but implements all CRUD operations that are required in an application.
 
-This Phonebook application is built with following technologies.
+This Todo application is built with following technologies.
 
 - HTML/CSS/Javascript
 - [Bootstrap](https://getbootstrap.com/ "Bootstrap") - An open-source CSS framework.
@@ -17,7 +17,7 @@ This Phonebook application is built with following technologies.
 - [Animate.css](https://animate.style/ "Animate.css") - A cross browser, ready to use css animation library.
 - [Toastr](https://codeseven.github.io/toastr/ "Toastr") - A Javascript library for non-blocking notifications.
 - [Particles JS](https://vincentgarreau.com/particles.js/ "Particles JS") - A lightweight JavaScript library used for creating particles which looks likes the vertices of polygon, used for creating background live animation.
-- [Phonebook API](https://coinmarketcap.com/ "Phonebook API") - This CRUD API is being running behind the whole application.
+- [Todo API](https://coinmarketcap.com/ "Todo API") - This CRUD API is being running behind the whole application.
 
 Want to see it live? [click here](https://github.com/mdazlaanzubair/Learn-MERN/tree/master/Assignment%2004 "click here")
 
