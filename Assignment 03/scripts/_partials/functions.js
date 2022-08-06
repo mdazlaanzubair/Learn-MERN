@@ -2,8 +2,10 @@
 
 // ? Declaring Data object which grabs all data used in this app
 export let data = {
-  proxy_server: "https://abacus-proxy-server.herokuapp.com/", // * denotes the base url to the proxy server
-  // proxy_server: "http://127.0.0.1:3000/", // * denotes the base url to the proxy server
+  proxy_server: {
+    rates: "https://abacus-proxy-server.herokuapp.com/get_rates", // * denotes the base url to the proxy server
+    cryptos: "https://abacus-proxy-server.herokuapp.com/get_cryptos", // * denotes the base url to the proxy server
+  },
   investment: 1, // * denotes the actual amount invested
   current_rate: 1, // * denotes the current price of selected crypto
   buy_cost: 1, // * denotes the initial purchase price
@@ -98,12 +100,20 @@ export const crypto_currency_fetcher = () => {
   // * grabing select UI element
   const crypto_list_select = grab_elem("#crypto_list", "element");
 
+  // setting crypto loading status
+  const loading_option = grab_elem("#cryptoLoading", "element");
+
   // * fetching from currency json file
-  fetch("../../../data/cmc_crypto_currencies.json")
+  // fetch("../../../data/cmc_crypto_currencies.json")
+  fetch(data.proxy_server.cryptos)
     // * converting response into json format
     .then((res) => res.json())
+
     // * dynamically populating option of crypto_select
     .then((result) => {
+      // setting crypto loading status
+      loading_option.innerHTML = "Loading";
+
       // * loopting through crypto currencies data to create options
       for (const crypto in result.data) {
         if (Object.hasOwnProperty.call(result.data, crypto)) {
@@ -131,6 +141,9 @@ export const crypto_currency_fetcher = () => {
           crypto_list_select.appendChild(option);
         }
       }
+
+      // setting crypto loading status
+      loading_option.innerHTML = "Loaded";
     });
 };
 
@@ -138,7 +151,6 @@ export const crypto_currency_fetcher = () => {
 // * This function is to fetch current rates and details of the crypto currency
 // * This function accepts argument that contain id of crypto currency to be fetched
 export const get_crypto_rate = (crypto_id) => {
-
   // * creating options for the url to be fetch
   const url_options = {
     method: "POST",
@@ -146,7 +158,7 @@ export const get_crypto_rate = (crypto_id) => {
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      // * converting crypto_id into string and sending it to 
+      // * converting crypto_id into string and sending it to
       // * proxy server in order to avoid CORS Error
       id: crypto_id,
     }),
@@ -160,7 +172,7 @@ export const get_crypto_rate = (crypto_id) => {
   const input_sell_cost = grab_elem("#sell_cost", "element");
 
   // * fetching the recent crypto rates
-  fetch(data.proxy_server, url_options)
+  fetch(data.proxy_server.rates, url_options)
     .then((res) => res.json())
     .then((results) => {
       // * setting current crypto price in variable
