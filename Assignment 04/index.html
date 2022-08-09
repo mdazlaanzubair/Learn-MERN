@@ -8,11 +8,11 @@
     <title>Todo App - The Task Recorder</title>
 
     <!-- loading style modules -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="./modules/animatecss/animate.min.css">
     <link rel="stylesheet" href="./modules/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./modules/bootstrap/theme.min.css">
     <link rel="stylesheet" href="./modules/toasterjs/toaster.min.css">
-
     <!-- custom stylesheet -->
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
@@ -28,36 +28,21 @@
                         <h6 class="card-subtitle text-muted">The Task Recorder</h6>
                     </div>
                     <div class="card-body">
-                        <form class="d-flex justify-content-between align-items-center" action="/" method="post">
-                            <input type="text" class="form-control" id="taskInput"
+                        <form id="taskForm" class="d-flex justify-content-between align-items-center">
+                            <input id="userInput" type="text" class="form-control form-control-lg"
                                 placeholder="Your tasks goes here...">
-
-                            <button type="submit" class="btn btn-primary m-0">Submit</button>
+                            <button id="userInputBtn" class="btn btn-success btn-lg m-0" type="submit">
+                                <i class="bi bi-send-plus"></i>
+                            </button>
                         </form>
+                        <small id="errMsg" class="text-danger my-2 fw-bold"></small>
                     </div>
                     <div class="card-footer bg-dark">
-                        <h5 class="card-title text-light">Tasks List</h5>
-                        <ul class="list-group">
-                            <li
-                                class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
-                                Cras justo odio
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn mx-1 btn-success">Completed</button>
-                                    <button type="button" class="btn mx-1 btn-outline-primary">Edit</button>
-                                    <button type="button" class="btn mx-1 btn-outline-danger">Delete</button>
-                                </div>
-                            </li>
-                            <li
-                                class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
-                                Dapibus ac facilisis in
-                                <span class="badge badge-primary badge-pill">2</span>
-                            </li>
-                            <li
-                                class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
-                                Morbi leo risus
-                                <span class="badge badge-primary badge-pill">1</span>
-                            </li>
-                        </ul>
+                        <h5 class="card-title text-light">
+                            <i class="bi bi-list-ul me-2"></i>
+                            Tasks List
+                        </h5>
+                        <ul id="list_holder" class="list-group"></ul>
                     </div>
                 </div>
             </div>
@@ -72,7 +57,7 @@
     <script src="./modules/toasterjs/toastr.min.js"></script>
 
     <!-- * custom script -->
-    <script type="module" src="./js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 
 </html>

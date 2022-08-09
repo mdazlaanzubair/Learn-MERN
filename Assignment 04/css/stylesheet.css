@@ -2,3 +2,8 @@ body {
     overflow-x: hidden;
     overflow-y: auto;
 }
+
+.checked {
+    color: #305272;
+    text-decoration: line-through;
+}
