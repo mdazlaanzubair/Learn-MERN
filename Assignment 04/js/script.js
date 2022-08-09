@@ -1,11 +1,7 @@
-let todos_list = [
-  { id: Date.now() + 1, title: "hello0", isCompleted: false },
-  { id: Date.now() + 2, title: "hello1", isCompleted: false },
-  { id: Date.now() + 3, title: "hello2", isCompleted: false },
-  { id: Date.now() + 4, title: "hello3", isCompleted: false },
-  { id: Date.now() + 5, title: "hello4", isCompleted: false },
-  { id: Date.now() + 6, title: "hello5", isCompleted: false },
-];
+// loading server functions
+import * as serv_func from "./_partials/server_calls.js";
+
+let todos_list = await serv_func.getTodos();
 
 // getting UI elements
 let user_input = document.getElementById("userInput");
@@ -30,11 +26,15 @@ const formValidate = () => {
 };
 
 // add todo function
-const addTodo = () => {
+const addTodo = async () => {
   const todo = { id: Date.now(), title: user_input.value, isCompleted: false };
   todos_list.push(todo);
   user_input.value = "";
+  // created todo on client side
   createTodo(todo);
+
+  // pushing todo to the server
+  todos_list = await serv_func.pushTodo(todo.title);
 };
 
 // create todo UI element function
@@ -50,26 +50,11 @@ const createTodo = (task) => {
   );
   task_item.setAttribute("id", `task-${task.id}`);
   task_item.innerText = task.title;
+  task_item.addEventListener("dblclick", (e) => {
+    editTodo(task.id);
+  });
 
   // creating action btns
-  const btn_group = document.createElement("div");
-
-  const task_editBtn = document.createElement("button");
-  task_editBtn.classList.add(
-    "btn",
-    "border-0",
-    "btn-sm",
-    "btn-outline-info",
-    "mx-1",
-    "px-1"
-  );
-
-  const editIcon = document.createElement("i");
-  editIcon.classList.add("bi", "bi-pencil-square", "mx-1");
-
-  task_editBtn.append(editIcon);
-  task_editBtn.setAttribute("onclick", `editTodo(this, ${task.id})`);
-
   const task_delBtn = document.createElement("button");
   task_delBtn.classList.add(
     "btn",
@@ -84,12 +69,12 @@ const createTodo = (task) => {
   delIcon.classList.add("bi", "bi-trash3", "mx-1");
 
   task_delBtn.append(delIcon);
-  task_delBtn.setAttribute("onclick", `deleteTodo(this, ${task.id})`);
-
-  btn_group.append(task_editBtn, task_delBtn);
+  task_delBtn.addEventListener("click", (e) => {
+    deleteTodo(task.id);
+  });
 
   // constructing task item
-  task_item.append(btn_group);
+  task_item.append(task_delBtn);
 
   // pushing task item to UI
   todo_holder.append(task_item);
@@ -105,27 +90,35 @@ const showTodos = () => {
 };
 
 // function to edit todo item
-const editTodo = (e, id) => {
-  const task_item = e.parentElement.parentElement;
+const editTodo = async (todoId) => {
+  const task_item = document.getElementById(`task-${todoId}`);
   task_item.remove();
 
   user_input.value = task_item.innerText;
 
   todos_list = todos_list.filter(function (todo) {
-    return todo.id !== id;
+    return todo.id !== todoId;
   });
-  console.log(todos_list);
+
+  // deleting todo from database
+  todos_list = await serv_func.delTodo(todoId);
 };
 
 // function to delete todo item
-const deleteTodo = (e, id) => {
-  const task_item = e.parentElement.parentElement;
+const deleteTodo = async (todoId) => {
+  // deleting todos from client side
+  const task_item = document.getElementById(`task-${todoId}`);
   task_item.remove();
-
-  const del_todo = todos_list.filter(function (todo) {
-    return todo.id === id;
+  todos_list = todos_list.filter(function (todo) {
+    return todo.id != todoId;
   });
-  console.log(del_todo[0].title);
+
+  // deleting todo from database
+  todos_list = await serv_func.delTodo(todoId);
+
+  console.log(todos_list);
 };
 
+// showing todo when loaded
 showTodos();
+console.log(todos_list)

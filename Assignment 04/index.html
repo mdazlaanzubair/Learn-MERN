@@ -13,11 +13,14 @@
     <link rel="stylesheet" href="./modules/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" href="./modules/bootstrap/theme.min.css">
     <link rel="stylesheet" href="./modules/toasterjs/toaster.min.css">
+
     <!-- custom stylesheet -->
     <link rel="stylesheet" href="./css/stylesheet.css">
 </head>
 
-<body>
+<!-- fetch todo from server when page completely loads -->
+
+<body id="appLoaded">
 
     <div class="containter-fluid my-5 py-5">
         <div class="row justify-content-center g-3">
@@ -49,6 +52,7 @@
         </div>
     </div>
 
+
     <!-- loading script modules -->
     <script src="./modules/jquery/jquery.min.js"></script>
     <script src="./modules/bootstrap/bootstrap.bundle.min.js"></script>
@@ -57,7 +61,7 @@
     <script src="./modules/toasterjs/toastr.min.js"></script>
 
     <!-- * custom script -->
-    <script src="./js/script.js"></script>
+    <script type="module" src="./js/script.js" defer></script>
 </body>
 
 </html>
