@@ -1,4 +1,4 @@
-const base_url = "http://127.0.0.1:3000";
+const base_url = "https://todocrudserver.herokuapp.com";
 
 // get todos from the server
 export const getTodos = async () => {

@@ -19,10 +19,8 @@ This Todo application is built with following technologies.
 - [Particles JS](https://vincentgarreau.com/particles.js/ "Particles JS") - A lightweight JavaScript library used for creating particles which looks likes the vertices of polygon, used for creating background live animation.
 - [Todo API](https://coinmarketcap.com/ "Todo API") - This CRUD API is being running behind the whole application.
 
-Want to see it live? [click here](https://github.com/mdazlaanzubair/Learn-MERN/tree/master/Assignment%2004 "click here")
+Want to see it live? [click here](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2004/ "click here")
 
 ### Preview
 
-<!-- [![Webpage Preview](./asset/imgs/site-preview.png "Webpage Preview")](https://theabacus.netlify.app/ "Webpage Preview") -->
-
-`Not Available Yet`
+[![Webpage Preview](./img/site-preview.png "Webpage Preview")](https://mdazlaanzubair.github.io/Learn-MERN/Assignment%2004/ "Webpage Preview")
