@@ -1,0 +1,21 @@
+body {
+  color: #a4b3bf;
+}
+
+.text-area {
+  color: #a4b3bf !important;
+  background-color: #14171a !important;
+  border: 3px solid #14171a;
+  transition: all ease-in-out 0.5s;
+}
+
+.text-area:focus {
+  box-shadow: none;
+  border-color: #212529;
+  background-color: #212529 !important;
+  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
+.text-light {
+  color: #a4b3bf !important;
+}
