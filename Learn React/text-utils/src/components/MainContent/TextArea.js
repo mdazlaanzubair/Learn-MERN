@@ -5,10 +5,12 @@ import PropTypes from "prop-types";
 // destructuring props
 export default function TextArea({
   inputText,
+  keyWordsArray,
   setInputText,
   setPreviewText,
   setTextDetails,
   setKeyWordsArray,
+  setKeyWordsFrequency,
 }) {
   // Function 1 - Analyze text
   const textAnalyzer = (e) => {
@@ -18,8 +20,9 @@ export default function TextArea({
     setInputText(text_area_val);
     setPreviewText(text_area_val);
 
-    // extracting keywords from input text
+    // extracting keywords from input text and their frequency or occurrence
     setKeyWordsArray(extractKeywords(text_area_val));
+    keyWordsFrequency(text_area_val);
 
     // Counting vowels, words chars, sentences, paragraphs and setting in textDetails object
     setTextDetails({
@@ -128,24 +131,69 @@ export default function TextArea({
 
   // Function 8 - Returns an array of keywords from a string by removing stop-words
   const extractKeywords = (textString) => {
-    return keyword_extractor.extract(textString, {
+    // getting list of keywords
+    const keywords = keyword_extractor.extract(textString, {
       language: "english",
       remove_digits: true,
       return_changed_case: true,
       remove_duplicates: false,
     });
+
+    // removing duplicates from keywords array
+    let uniqueKeywords = [];
+    keywords.forEach((keyword) => {
+      // if uniqueKeywords does not contain keyword
+      if (!uniqueKeywords.includes(keyword)) {
+        uniqueKeywords.push(keyword);
+      }
+    });
+
+    // returning array of unique keyword
+    return uniqueKeywords;
   };
+
+  // Function 9 - Returns object of keyword frequency
+  const keyWordsFrequency = (textString) => {
+    // creating array from inputText
+    const originalArray = textString.toLowerCase().split(" ");
+
+    const keywordFrequencyArray = [];
+
+    // looping through keywords array and counting occurrence of every keyword
+    for (let i = 0; i < keyWordsArray.length; i++) {
+      const keyword = keyWordsArray[i];
+
+      // filtering out the words matches the keyword and putting in the array
+      // length of that array will be the frequency of tht keyword
+      let keywordCount = originalArray.filter((elem) => {
+        return keyword === elem ? keyword : "";
+      }).length;
+
+      // pushing frequency object in the array
+      if (keywordCount > 1) {
+        keywordFrequencyArray.push({
+          word: keyword,
+          frequency: keywordCount,
+        });
+      }
+    }
+
+    // setting value of frequency array
+    setKeyWordsFrequency(keywordFrequencyArray);
+  };
+
   return (
     <>
       <textarea
-        type="email"
+        type="text"
         className="form-control bg-dark text-light text-area"
         id="textInput"
         placeholder="Dump your text here..."
         value={inputText === "No Text" ? "" : inputText}
         rows="7"
-        onChange={textAnalyzer}
-        onPaste={textAnalyzer}
+        onInput={(e) => {
+          textAnalyzer(e);
+        }}
       ></textarea>
     </>
   );

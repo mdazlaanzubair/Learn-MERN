@@ -31,7 +31,14 @@ export default function TextPreview({ previewText, keyWordsArray }) {
     <>
       <div className="card bg-dark border-0 my-4">
         <div className="card-body p-0 text-light">
-          <h5 className="card-title">Preview</h5>
+          <h5 className="card-title my-4">
+            Preview
+            <CopyToClipboard text={previewText} onCopy={copyKeyword}>
+              <button className="btn btn-sm btn-secondary text-dark fw-bolder shadow-none float-end">
+                {copiedKeyword.status === true ? "Copied!" : "Copy Preview Text"}
+              </button>
+            </CopyToClipboard>
+          </h5>
           <p className="card-text">{previewText}</p>
         </div>
         <div className="card-footer border-0 bg-transparent p-0 my-3">

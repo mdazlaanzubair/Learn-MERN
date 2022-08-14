@@ -3,7 +3,9 @@ export default function TextDetails({
   textDetails,
   previewText,
   setPreviewText,
+  keyWordsFrequency,
 }) {
+  // options for change case
   const textCases = ["original", "upper", "lower"];
 
   const changeTextCase = (e) => {
@@ -67,6 +69,20 @@ export default function TextDetails({
       </ul>
       <hr className="border-secondary" />
       <h5 className="text-light">Keywords Frequency</h5>
+
+      <ul className="list-group">
+        {Object.keys(keyWordsFrequency).map((key, index) => (
+          <li
+            key={index}
+            className="list-group-item d-flex justify-content-between align-items-center bg-dark text-light p-0 border-0"
+          >
+            {keyWordsFrequency[key].word}
+            <span className="badge bg-secondary rounded-pill">
+              {keyWordsFrequency[key].frequency}
+            </span>
+          </li>
+        ))}
+      </ul>
     </>
   );
 }

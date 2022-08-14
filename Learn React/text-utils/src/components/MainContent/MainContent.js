@@ -7,9 +7,8 @@ export default function MainContent() {
   //  setting states of the application
   const [inputText, setInputText] = useState();
   const [previewText, setPreviewText] = useState();
-  const [keyWordsArray, setKeyWordsArray] = useState([
-    "No keyword to display",
-  ]);
+  const [keyWordsArray, setKeyWordsArray] = useState(["No keyword to display"]);
+  const [keyWordsFrequency, setKeyWordsFrequency] = useState("asdas");
   const [textDetails, setTextDetails] = useState({
     words: {
       label: "Words",
@@ -44,10 +43,12 @@ export default function MainContent() {
           <div className="col-md-9">
             <TextArea
               inputText={inputText}
+              keyWordsArray={keyWordsArray}
               setInputText={setInputText}
               setPreviewText={setPreviewText}
               setTextDetails={setTextDetails}
               setKeyWordsArray={setKeyWordsArray}
+              setKeyWordsFrequency={setKeyWordsFrequency}
             />
 
             <TextPreview
@@ -60,6 +61,7 @@ export default function MainContent() {
               inputText={inputText}
               textDetails={textDetails}
               previewText={previewText}
+              keyWordsFrequency={keyWordsFrequency}
               setPreviewText={setPreviewText}
             />
           </div>
