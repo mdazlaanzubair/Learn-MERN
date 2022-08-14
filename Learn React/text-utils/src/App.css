@@ -2,6 +2,10 @@ body {
   color: #a4b3bf;
 }
 
+.form-check-input:focus {
+  box-shadow: none;
+}
+
 .text-area {
   color: #a4b3bf !important;
   background-color: #14171a !important;
@@ -11,11 +15,22 @@ body {
 
 .text-area:focus {
   box-shadow: none;
-  border-color: #212529;
-  background-color: #212529 !important;
-  box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .15) !important;
+  border-color: #12161a;
+  background-color: #12161a !important;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, .15) !important;
 }
 
 .text-light {
   color: #a4b3bf !important;
+}
+
+.keyword-badge {
+  background-color: #12161a;
+  transition: all ease-in-out 0.3s;
+}
+
+.keyword-badge:hover {
+  color: #a4b3bf;
+  cursor: pointer;
+  background-color: rgba(18, 22, 26, 0.411)
 }
