@@ -22,7 +22,11 @@ export default function TextArea({
 
     // extracting keywords from input text and their frequency or occurrence
     setKeyWordsArray(extractKeywords(text_area_val));
-    keyWordsFrequency(text_area_val);
+
+    // calculating the frequency if the keywords are fetched
+    if (keyWordsArray.length > 0) {
+      keyWordsFrequency(text_area_val);
+    }
 
     // Counting vowels, words chars, sentences, paragraphs and setting in textDetails object
     setTextDetails({
