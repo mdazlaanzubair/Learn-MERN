@@ -1,4 +1,4 @@
-const bcrypt = require("bcrypt");
+import { hash, compare } from "bcrypt";
 
 // users database until I learn mongoDB start
 const userBase = [
@@ -15,7 +15,7 @@ const userBase = [
 ];
 
 // signup function
-const signup = (req, res) => {
+const signup = async (req, res) => {
   // getting req data
   const { username, email, password } = req.body;
 
@@ -29,7 +29,7 @@ const signup = (req, res) => {
     }
 
     // hashing password
-    const hashed_pwd = bcrypt.hash(password, 12);
+    const hashed_pwd = await hash(password, 12);
 
     // creating new user object
     const new_user = {
@@ -54,7 +54,7 @@ const signup = (req, res) => {
 };
 
 // signin function
-const signin = (req, res) => {
+const signin = async (req, res) => {
   // getting req data
   const { email, password } = req.body;
 
@@ -68,7 +68,7 @@ const signin = (req, res) => {
     }
 
     // matching password
-    const pwd_matched = bcrypt.compare(password, userExist.password);
+    const pwd_matched = await compare(password, userExist.password);
 
     // if password not matched
     if (!pwd_matched) {
@@ -89,4 +89,4 @@ const signin = (req, res) => {
   }
 };
 
-module.exports = { userBase, signin, signup };
+export { signup, signin };

@@ -1,5 +1,5 @@
 import express from "express";
-import * as auth from "./controller/authenticator.js";
+import { signup, signin } from "./controller/authenticator.mjs";
 import cors from "cors";
 
 
@@ -10,10 +10,10 @@ app.use(express.json());
 const port = process.env.PORT || 3000;;
 
 // register route
-app.post("/register", auth.signup);
+app.post("/register", signup);
 
 // login route
-app.post("/login", auth.signin);
+app.post("/login", signin);
 
 app.listen(port, () => {
   console.log(`Authenticator API is lurking on port no. ${port}`);
