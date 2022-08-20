@@ -1,0 +1,38 @@
+{
+  "name": "jwt-auth",
+  "version": "1.0.0",
+  "description": "A basic authentication system to implement simple login/signup.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.mjs"
+  },
+  "keywords": [
+    "jwt",
+    "express",
+    "javascript",
+    "node",
+    "mongo",
+    "db",
+    "database",
+    "atlas",
+    "js",
+    "auth",
+    "authentication",
+    "json",
+    "web",
+    "token",
+    "login",
+    "signin",
+    "signup",
+    "api"
+  ],
+  "author": "Muhammad Azlaan Zubair",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
