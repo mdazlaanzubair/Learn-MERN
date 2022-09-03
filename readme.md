@@ -1,4 +1,4 @@
-[![Hero Image](https://miro.medium.com/max/1400/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg "Hero Image")](# "Hero Image")
+[![Hero Image](https://miro.medium.com/max/1400/1*FVtCyRdJ6KOr4YswTtwMeA.jpeg "Hero Image")]("Hero Image")
 
 ## Introduction
 
