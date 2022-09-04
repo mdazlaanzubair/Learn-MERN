@@ -1,1 +1,3 @@
 proxy_server
+# Local Netlify folder
+.netlify
