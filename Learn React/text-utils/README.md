@@ -1,12 +1,8 @@
 # ReactTextUtils Project
 
-### Preamble
+### Overview
 
 TextUtils is simply a set of utility functions to do operations on String objects. This is an app that perform some string operation and displays the result on webpage in realtime using [React JS](https://reactjs.org/ "React JS").
-
-### Assignment Overview
-
-The best way to practice a multi-page website is an E-Commerce Web Store. Here is an E-Commerce website, built with with HTML/CSS/Javascript and [Material Design Bootstrap UI KIT](https://mdbootstrap.com/ "Material Design Bootstrap UI KIT").
 
 Want to see it live? [click here](https://reacttextutils1.netlify.app/ "click here")
 
